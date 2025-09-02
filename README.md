@@ -1,6 +1,7 @@
 # AWS Session Manager – Secure EC2 Access Without SSH
 ## What is AWS Session Manager?
-AWS Session Manager lets you securely connect and manage your servers or virtual machines (VMs) without opening network ports or using SSH keys. You can start remote sessions to your EC2 instances, on-premises servers, or VMs using a web browser or command-line tools.
+
+### AWS Session Manager lets you securely connect and manage your servers or virtual machines (VMs) without opening network ports or using SSH keys. You can start remote sessions to your EC2 instances, on-premises servers, or VMs using a web browser or command-line tools.
 ---
 ## Problems with Traditional SSH
 - You need to manage SSH key files.  
@@ -46,7 +47,7 @@ While creating the EC2 instance:
   ```powershell
   choco install awscli-session-manager
   ```
-![Session Manager plugin installed / version](images/aws-ssm-agent-plugin.png
+![Session Manager plugin installed / version](images/aws-ssm-agent-plugin.png)
 ---
 ## Step 4: Verify SSM Agent on EC2
 The **SSM Agent** is **pre-installed** on:
@@ -88,7 +89,7 @@ sudo systemctl enable amazon-ssm-agent
   Default region name : 
   Default output format :
   ```
-![Connect via AWS CLI](images/connect-via-awscli.png)
+[Connect via AWS CLI](images/aws-cli-connect.png)
 
 ---
 ## Step 6: Enable CloudWatch Logs in Session Manager
