@@ -89,16 +89,17 @@ sudo systemctl enable amazon-ssm-agent
 ![Connect via Session Manager (console)](images/ssm-connect-via-console.png)
 
 ---
-### Option 2: AWS CLI (Windows / Ubuntu) 
-- From **Windows (PowerShell)**:  
-  ```powershell
-  aws ssm start-session --target <instance-id>
-  aws configure
-  AWS Access Key ID:
-  AWS Secret Access Key : 
-  Default region name : 
-  Default output format :
+### Option 2: AWS CLI (Windows / Ubuntu)
+- From **Windows (PowerShell)**:
+```powershell
+aws ssm start-session --target <instance-id>
+aws configure
+AWS Access Key ID: <your-access-key>
+AWS Secret Access Key: <your-secret-key>
+Default region name: <your-region>
+Default output format: <json>
 ```
+
 ![Connect via AWS CLI](images/connected-via-awscli.png)
 
 ---
