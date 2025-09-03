@@ -1,4 +1,8 @@
 # AWS Session Manager – Secure EC2 Access Without SSH
+
+Securely access EC2 instances **without SSH keys or open ports**, using AWS Systems Manager Session Manager.
+
+---
 ## What is AWS Session Manager?
 
 #### AWS Session Manager lets you securely connect and manage your servers or virtual machines (VMs) without opening network ports or using SSH keys. You can start remote sessions to your EC2 instances, on-premises servers, or VMs using a web browser or command-line tools.
