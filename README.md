@@ -99,7 +99,6 @@ sudo systemctl enable amazon-ssm-agent
   Default region name : 
   Default output format :
 ```
-
 ![Connect via AWS CLI](images/connected-via-awscli.png)
 
 ---
