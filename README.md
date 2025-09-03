@@ -19,20 +19,25 @@
 ## Step 1: Launch EC2 Instance (Without SSH)
 While creating the EC2 instance:
 - **Do not select a key pair** → prevents SSH access. 
+
 ![No key pair selected](images/no-keypair.png)
   
 - **Do not add a security group** → no inbound rules are required.    
+
 ![Security group with no inbound rules](images/sg-noinboundrule.png)
   
 ---
 ## Step 2: Attach IAM Role to EC2
 - Create an IAM role with `AmazonSSMManagedInstanceCore` managed policy. 
+
 ![Create IAM role](images/iam-role.png) 
 
 - Attach CloudWatch Logs custom policy for logging.  - EC2SSMCloudWatchLogs
+
 ![Attach policies to role](images/policy-attach.png)
 
 - Attach this role to the EC2 instance.  
+
 ![Attach role to EC2 instance](images/iamrole-ec2.png)
  
 ---
@@ -40,14 +45,18 @@ While creating the EC2 instance:
 - Install AWS CLI:  
   ```powershell
   choco install awscli
-  ```
+```
+
 ![AWS CLI installed / version](images/aws-cli.png)
+
 
 - Install Session Manager Plugin:  
   ```powershell
   choco install awscli-session-manager
   ```
+
 ![Session Manager plugin installed / version](images/aws-ssm-agent-plugin.png)
+
 ---
 ## Step 4: Verify SSM Agent on EC2
 The **SSM Agent** is **pre-installed** on:
@@ -58,7 +67,8 @@ To verify:
 ```bash
 sudo systemctl status snap.amazon-ssm-agent.amazon-ssm-agent.service
 ```
-If it shows `active (running)`, the agent is ready.  
+If it shows `active (running)`, the agent is ready.
+
 ![SSM Agent status on instance](images/ssm-agent.png)
   
 If not installed (e.g., custom AMI), install manually:
@@ -88,14 +98,18 @@ sudo systemctl enable amazon-ssm-agent
   AWS Secret Access Key : 
   Default region name : 
   Default output format :
-  ```
+```
+
+![Connect via AWS CLI](images/connected-via-awscli.png)
 
 ---
 ## Step 6: Enable CloudWatch Logs in Session Manager
 1. Create a CloudWatch Log Group (e.g., `/aws/ssm/session-logs`).  
+
 ![Create CloudWatch Log Group](images/cloudwatch-logGroup.png)
 2. In the **AWS Systems Manager console**, go to **Session Manager → Preferences**.  
 3. Enable **CloudWatch logging** and select the log group.  
+
 ![Enable Session Manager preferences](images/ssm-preference-enable.png)
 4. Save preferences to enable session logging.  
   
