@@ -89,7 +89,6 @@ sudo systemctl enable amazon-ssm-agent
   Default region name : 
   Default output format :
   ```
-[Connect via AWS CLI](images/connect-via-awscli.png)
 
 ---
 ## Step 6: Enable CloudWatch Logs in Session Manager
