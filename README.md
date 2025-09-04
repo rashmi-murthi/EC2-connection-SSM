@@ -16,3 +16,16 @@
 - No bastion host required.
 - Sessions are secure and encrypted.
 - Session activity can be logged for auditing.
+
+## Comparison: General SSM Access vs Private Subnet with VPC Endpoints
+
+| Feature                  | General SSM Access           | Private Subnet with VPC Endpoints  |
+|--------------------------|-----------------------------|-----------------------------------|
+| Network Setup            | EC2 connects directly to SSM | EC2 connects via VPC Endpoints     |
+| Subnet Type             | Public or Private              | Private                           |
+| Internet Access Needed  | Usually yes                   | No                              |
+| Security                | IAM roles and managed policies | IAM roles, managed policies, and VPC endpoint policies |
+| Session Logging         | CloudWatch Logs enabled       | CloudWatch Logs enabled            |
+| Typical Use Cases       | Simpler setups               | Secure, isolated environments       |
+
+
