@@ -4,7 +4,7 @@
    - Use `AmazonSSMManagedInstanceCore` managed policy.
    - This allows the instance to connect to Systems Manager.  
 
-   ![Create IAM role](images/iam-role.png)
+   ![Create IAM role](../General-SSM-Access-No-SSH/images/iam-role.png)
 
 2. **Add CloudWatch Logs Policy** (for session logging)
    - Create a custom inline policy (example name: `CustomCloudWatchLogsPolicy`):
@@ -30,12 +30,13 @@
        ]
    }
 </details>
+```
 
-![Attach policies to role](images/policy-attach.png)
+![Attach policies to role](../General-SSM-Access-No-SSH/images/policy-attach.png)
 
 3. **Attach this role to the EC2**
 
-![Attach role to EC2 instance](images/iamrole-ec2.png)
+![Attach role to EC2 instance](../General-SSM-Access-No-SSH/images/iamrole-ec2.png)
 
 ## Attach KMS Key Policy (Optional – For Encrypted Session Logs)
 
