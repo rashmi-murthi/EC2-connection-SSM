@@ -18,7 +18,7 @@ While creating the EC2 instance:
 - Create an IAM role with `AmazonSSMManagedInstanceCore` managed policy.  
 - Attach CloudWatch Logs custom policy (for session logging).  
 
-👉 Full IAM + CloudWatch policy JSON is in [iam-policy.md](../prerequisites/iam-policy.md).  
+👉 Full IAM + CloudWatch policy JSON is in [iam-role-policy.md](../prerequisites/iam-role-policy.md).  
 
 ![Attach role to EC2](images/iamrole-ec2.png)
 
@@ -106,6 +106,10 @@ aws ssm start-session --target <instance-id>
    - Enable CloudWatch Logs.
    - Select the created log group.
 ![Enable Session Manager preferences](images/ssm-preference-enable.png)
+
+3. View the cloudwatch logs : Cloudwatch → LogGroups - Log events
+
+![CloudWatch Logs Setup](images/cloudwatch-logs.png)
 
 ---
 ## Final Setup Summary

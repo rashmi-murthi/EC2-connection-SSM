@@ -31,7 +31,7 @@ Attach an IAM Role with policies:
 - `AmazonSSMManagedInstanceCore`  
 - Custom CloudWatch logging policy (for session logs)  
 
-👉 See [iam-role-policy.md](../prerequisites/iam-policy.md) for full JSON policies.  
+👉 See [iam-role-policy.md](../prerequisites/iam-role-policy.md) for full JSON policies.  
 
 ![Attach IAM Role](images/iamrole-attach.png)
 
@@ -56,7 +56,6 @@ In **SSM → Session Manager → Preferences**:
 
 ⚠️ Make sure your EC2 role includes permissions for CloudWatch Logs (see [iam-role-policy.md](../prerequisites/iam-policy.md)).  
 
-![CloudWatch Logs Setup](images/cloudwatch-logs.png)  
 ![SSM Preferences](images/ssm-preferences.png)  
 ![KMS Encryption](images/kms-key-encryption.png)
 
